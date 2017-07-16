@@ -21,7 +21,6 @@ Rails.application.routes.draw do
   get '/community', to: 'static#community'
   get '/community/past-events', to: 'static#past_events'
 
-
   match '/search', to: 'search#results', via: [:get, :post]
   match '/quicksearch', to: 'search#quicksearch', via: [:get, :post]
 
@@ -30,6 +29,14 @@ Rails.application.routes.draw do
 
   get '/*product/api-reference', to: 'markdown#api'
   get '/:product/*document', to: 'markdown#show', constraints: DocumentationConstraint.new
+
+  namespace :modules do
+    namespace :messaging do
+      resources :sms, only: [:index, :show, :update] do
+        get '/webhook', action: :webhook, on: :collection
+      end
+    end
+  end
 
   get '/robots.txt', to: 'static#robots'
 
