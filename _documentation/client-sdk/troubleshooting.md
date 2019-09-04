@@ -5,6 +5,13 @@ navigation_weight: 1
 
 # Troubleshooting
 
+## Version control
+
+Please make sure you are using the latest version of our SDK. Check for more details here: 
+JavaScript: https://developer.nexmo.com/client-sdk/sdk-documentation/javascript/release-notes
+iOS: https://developer.nexmo.com/client-sdk/sdk-documentation/ios/release-notes
+Android: https://developer.nexmo.com/client-sdk/sdk-documentation/android/release-notes
+
 ## Working with the Nexmo CLI
 
 ### Nexmo Application setup
@@ -85,6 +92,16 @@ Getting Connection error or Connection Timeout while trying to login to the SDK:
 
 * You need to have a valid admin `JWT`, meaning a `JWT` without "sub" claim. You can [Decode your JWT](https://jwt.io/) to make sure.
 
+## Application settings
+
+Check that your application set up properly using this guide https://developer.nexmo.com/conversation/guides/application-setup
+
+Check that you have a valid answer_url linked to the application. 
+
+## Country specific restrictions 
+
+Please make sure you have checked Voice country specific restrictions https://help.nexmo.com/hc/en-us/sections/200637656-Country-Specific-Features-and-Restrictions which will give you more details if there are any specific details which you need to take into account when building your NCCO. 
+
 # Have more Questions?
 
-Should you have any further questions, issues or feedback, please contact us on `support@nexmo.com` or at [Nexmo community Slack](https://developer.nexmo.com/community/slack).
+Should you have any further questions, issues or feedback, please contact us on `ea.support@nexmo.com` or at [Nexmo community Slack](https://developer.nexmo.com/community/slack).
